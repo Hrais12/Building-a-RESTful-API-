@@ -35,6 +35,16 @@ app.use("/api/deserts", deserts);
 
 
 
+app.get("/", (req, res) => {
+    res.send("Work in progress!");
+  });
+  
+  // 404 Middleware
+  app.use((req, res) => {
+    res.status(404);
+    res.json({ error: "Resource Not Found" });
+  });
+  
 
 
 
